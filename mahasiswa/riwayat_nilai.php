@@ -59,6 +59,7 @@ if(!isset($_SESSION['nim']))
                       <th>Kode Matakuliah</th>
                       <th>Nama Matakuliah</th>
                       <th>Sks</th>
+		      <th>Semester</th>
                       <th>Nilai</th>
                     </tr>
 					 <?php
@@ -70,8 +71,8 @@ if(!isset($_SESSION['nim']))
                     <tr>
                       <td><?php echo $data['kd_matakuliah']; ?></td>
                       <td><?php echo $data['nama_matakuliah']; ?></td>
-                      <td><?php echo $data['semester']; ?></td>
                       <td><?php echo $data['sks']; ?></td>
+		      <td><?php echo $data['semester']; ?></td>
                       <td><?php echo $data['nilai']; ?></td>
                     </tr>
 							<?php }?>
