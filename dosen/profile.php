@@ -97,13 +97,13 @@ if(!isset($_SESSION['nip']))
 							
 				<div class="box-body table-responsive no-padding">
 				<strong><h3> Biodata Akademik </h3><strong>
-				<?php
+                  <table class="table table-hover">
+			  <?php
 							$sql='select * from matakuliah,data_dosen where matakuliah.nip=data_dosen.nip AND data_dosen.nip="'.$_SESSION['nip'].'"';
 							$query = mysqli_query($koneksi,$sql);
 							while($data = mysqli_fetch_array($query)){
 								
 				?> 
-                  <table class="table table-hover">
                     <tr>
                       <th>Matakuliah Diampu</th>
                       <td><?php echo $data['nama_matakuliah']; ?> (<b>Semester</b> <?php echo $data['semester']; ?>)</td>
